@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PASSWORD</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    function validatePassword() {
+      var passwordInput = document.getElementById("password-input");
+      var errorMessage = document.getElementById("error-message");
+      
+      if (passwordInput.value === "IamYLITKA") {
+        window.location.href = "gv1ng.html";
+      } else {
+        errorMessage.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="login-box">
+  <h2>Введіть пароль від ресурсу.</h2>
+  <form>
+    <div class="user-box">
+      <input type="password" id="password-input" required="" onkeydown="if(event.keyCode==13) {event.preventDefault(); validatePassword();}">
+      <label>Пароль</label>
+    </div>
+    <a onclick="validatePassword()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Перевірити!
+    </a>
+    <div id="error-message" class="error-message" style="display: none;">Невірний пароль, може у книжці вірний?</div>
+  </form>
+</div>
+</body>
+</html>
